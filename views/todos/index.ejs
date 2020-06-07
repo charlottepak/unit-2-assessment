@@ -13,7 +13,11 @@
     <ul>
       <% todos.forEach(function(t) { %>
       <li>
+        <!-- made changes here -->
         <a><%= t.todo %></a>
+        - 
+        <%= t.done ? 'done' : 'Not Done' %>
+
         <form
           action="/todos/<%= t.id %>?_method=DELETE"
           class="delete-form"
