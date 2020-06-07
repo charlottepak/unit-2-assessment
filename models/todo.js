@@ -8,8 +8,10 @@ module.exports = {
 };
 
 function deleteOne(id) {
-  const idx = todos.findIndex((todo) => todo.id === id);
-  todos.splice(idx, 1);
+  const idx = todos.findIndex((todo) => todo.id == id);
+  if (idx !== -1) {
+    todos.splice(idx, 1); 
+  };
 }
 
 function create(todo) {
